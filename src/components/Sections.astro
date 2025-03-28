@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout>
+    <div class="sections-container">
+        <a href="/page1" class="section">01 Fundamentals of Computer Science</a>
+        <a href="/page2" class="section">02 Software Engineering</a>
+        <a href="/page3" class="section">03 Systems Desing</a>
+        <a href="/page4" class="section">Sección 4</a>
+        <a href="/page5" class="section">Sección 5</a>
+    </div>
+
+    <style>
+        .sections-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 3rem;
+        }
+
+        .section {
+            box-shadow: 1px 1px 10px rgb(223, 223, 223), -1px -1px 10px rgb(232, 232, 232);
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            width: 70%;
+            height: 300px;
+            margin: 1rem;
+        }
+
+        .section:nth-child(odd) {
+            align-self: flex-start; /* Align odd sections to the left */
+        }
+
+        .section:nth-child(even) {
+            align-self: flex-end; /* Align even sections to the right */
+        }
+
+        /* Appear on scroll */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 3s ease, transform 3s ease;
+        }
+
+        .section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .section:hover {
+            transform: scale(1.05) translateY(0);
+            transition: transform 0.5s ease-out;
+        }
+        </style>
+
+        <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+            });
+        }, { threshold: 0.1 }); // Adjusted threshold for smoother triggering
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+        </script>

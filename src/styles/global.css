@@ -1,0 +1,192 @@
+/* Global CSS Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    /* Color Palette */
+    --background-color: #ffffff;
+    --sub-background-color:rgb(163, 163, 163);
+    --text-color: #000000;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --light-color: #1f1f1f;
+    --dark-color: #000000;
+
+    /* Typography */
+    --font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+    --line-height-base: 1.5;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    /* Shadows */
+    --box-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin: 0 0 var(--spacing-md);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--dark-color);
+}
+
+ul, ol {
+    margin: 0 0 var(--spacing-md);
+    padding: 0 0 0 var(--spacing-lg);
+}
+
+li {
+    margin-bottom: var(--spacing-sm);
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: var(--box-shadow-sm);
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius-sm);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow-sm);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-md);
+}
+
+th, td {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--secondary-color);
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background-color: var(--light-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+}
+
+/* Forms */
+fieldset {
+    border: 1px solid var(--secondary-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --light-color: #1f1f1f;
+    --dark-color: #000000;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] a {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] code {
+    background-color: var(--dark-color);
+}
+
+[data-theme="dark"] button {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] input, [data-theme="dark"] textarea {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}

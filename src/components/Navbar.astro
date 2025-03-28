@@ -1,0 +1,62 @@
+---
+const links = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Sections', href: '/Sections' },
+    { name: 'Contact', href: '/contact' },
+];
+---
+
+<nav class="navbar">
+    <div class="container">
+        <a href="/" class="logo">MyWebsite</a>
+        <ul class="nav-links">
+            {links.map(link => (
+                <li>
+                    <a href={link.href}>{link.name}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 1px 5px 5px rgb(230, 230, 230);
+        background-color: #ffffff;
+        color: rgb(122, 91, 91);
+        padding: 1rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #00bcd4;
+    }
+</style>

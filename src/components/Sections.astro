@@ -3,72 +3,151 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
 <BaseLayout>
-    <div class="sections-container">
-        <a href="/page1" class="section">01 Fundamentals of Computer Science</a>
-        <a href="/page2" class="section">02 Software Engineering</a>
-        <a href="/page3" class="section">03 Systems Desing</a>
-        <a href="/page4" class="section">Sección 4</a>
-        <a href="/page5" class="section">Sección 5</a>
+    <div class="display">
+        <div class="sections">
+            <div class="section" id="section1">
+                <div class="theme">
+                    <h1>1 CS Core Fundamentals</h1>
+                    <p>This section covers the essential foundations of Computer Science, which serve as the building blocks for any computer science engineer. It includes applied mathematics, data structures, and algorithms that enable efficient problem-solving, as well as an understanding of programming paradigms that guide software construction. Theoretical topics that define the limits of what is computationally possible, as well as operating systems and networks that enable the execution and communication of programs, are also discussed.</p>
+                </div>
+                <div class="sub-themes">
+                    <div class="sub-theme" id="sub-theme1"><a href="/mathematics-for-cs">Mathematics for CS</a></div>
+                    <div class="sub-theme" id="sub-theme2"><a href="/data-structures">Data Structures</a></div>
+                    <div class="sub-theme" id="sub-theme3"><a href="/algorithms">Algorithms</a></div>
+                    <div class="sub-theme" id="sub-theme4"><a href="/programming-paradigms">Programming paradigms</a></div>
+                    <div class="sub-theme" id="sub-theme5"><a href="/theory-of-computation">Theory Of Computation</a></div>
+                    <div class="sub-theme" id="sub-theme6"><a href="/operating-systems">Operating systems</a></div>
+                    <div class="sub-theme" id="sub-theme7"><a href="/networking-and-communication">Networking & Communication</a></div>
+                    <div class="sub-theme" id="sub-theme8"><a href="/databases">Databases</a></div>
+                </div>
+            </div>
+            <div class="section" id="section2">
+                <div class="theme">
+                    <h1>2 Software Engineer</h1>
+                    <p>The goal of this section is to present the principles and methodologies that guide the development of high-quality professional software. It covers design principles (like SOLID) and design patterns that structure code, as well as development methodologies like Agile and Scrum. Additionally, modern collaboration practices using version control tools like Git are explored, along with testing strategies and automation that ensure software quality. DevOps, which integrates development and operations in the cloud for improved efficiency and scalability, is also addressed.</p>
+                </div>
+                <div class="sub-themes">
+                    <div class="sub-theme" id="sub-theme1"><a href="/software-engineering-principles">Software Engineering Principles</a></div>
+                    <div class="sub-theme" id="sub-theme2"><a href="/design-patterns">Design Patterns</a></div>
+                    <div class="sub-theme" id="sub-theme3"><a href="/development-methodologies">Development Methodologies</a></div>
+                    <div class="sub-theme" id="sub-theme4"><a href="/version-control-and-collaboration">Version Control & Collaboration</a></div>
+                    <div class="sub-theme" id="sub-theme5"><a href="/software-testing">Software Testing</a></div>
+                    <div class="sub-theme" id="sub-theme6"><a href="/devops-and-cloud-computing">DevOps & Cloud Computing</a></div>
+                </div>
+                
+            </div>
+            <div class="section" id="section3">
+                <div class="theme">
+                    <h1> 3 System Design</h1>
+                    <p>In this section, the principles and best practices for designing large, scalable, and efficient systems are studied. It includes a comparison of monolithic and microservices architectures, as well as how to manage high availability, fault tolerance, and data replication. Performance optimization techniques using caching and event-driven architectures, essential for real-time processing, are also covered. Finally, scalability theory and consistency models for distributed systems are examined.</p>
+                </div>
+                <div class="sub-themes">
+                    <div class="sub-theme" id="sub-theme1"><a href="/large-scale-system-development">Large-Scale System Development</a></div>
+                    <div class="sub-theme" id="sub-theme2"><a href="/fault-tolerant">Fault-Tolerant</a></div>
+                    <div class="sub-theme" id="sub-theme3"><a href="/Highly-available-systems">tHighly Available Systems</a></div>
+                    <div class="sub-theme" id="sub-theme4"><a href="/databases-at-scale">Databases at Scale</a></div>
+                    <div class="sub-theme" id="sub-theme5"><a href="/caching-performance-optimization">Caching & Performance Optimization</a></div>
+                    <div class="sub-theme" id="sub-theme6"><a href="/event-driven-architecture">Event-Driven Architecture</a></div>
+                    <div class="sub-theme" id="sub-theme7"><a href="/scalability-consistency-models">Scalability & Consistency Models</a></div>
+                </div>
+            </div>
+            <div class="section" id="section4">
+                <div class="theme">
+                    <h1>4 Advance Topics</h1>
+                    <p>This section delves into cutting-edge topics in computer science. It covers distributed computing techniques like MapReduce and Spark, as well as cybersecurity topics such as cryptography and common attacks (XSS, SQL injection, CSRF). Additionally, the section explores artificial intelligence and machine learning, focusing on neural networks, supervised and unsupervised learning, and deep learning. Blockchain and applied cryptography are also discussed, with an emphasis on consensus algorithms, smart contracts, and decentralized applications.</p>
+                </div>
+                <div class="sub-themes">
+                    <div class="sub-theme" id="sub-theme1"><a href="/distributed-computing">Distributed Computing</a></div>
+                    <div class="sub-theme" id="sub-theme2"><a href="/cybersecurity">Cybersecurity</a></div>
+                    <div class="sub-theme" id="sub-theme3"><a href="/artificial-intelligence-and-machine-learning">IA & Machine Learning</a></div>
+                    <div class="sub-theme" id="sub-theme4"><a href="/blockchain-and-applied-cryptography">Blockchain & Applied Cryptography</a></div>
+                </div>
+            </div>
+            <div class="section" id="section5">
+                <div class="theme">
+                    <h1>5 Real World Applications</h1>
+                    <p>This section focuses on applying computer science knowledge to real-world problems. It covers competitive programming, advanced problem-solving strategies, and coding competitions. Software optimization topics like profiling, performance tuning, and caching techniques are explored. The section also delves into scalable system architecture, studying how to design real-world systems. Industry case studies analyze well-known software architectures the section looks at tech trends and future innovations, including quantum computing, edge computing, and autonomous systems.</p>
+                </div>
+                <div class="sub-themes">
+                    <div class="sub-theme" id="sub-theme1"><a href="/competitive-programming">Competitive Programming</a></div>
+                    <div class="sub-theme" id="sub-theme2"><a href="/software-optimization">Software Optimization</a></div>
+                    <div class="sub-theme" id="sub-theme3"><a href="/scalable-system-architecture">Scalable System Architecture</a></div>
+                    <div class="sub-theme" id="sub-theme4"><a href="/industry-case-studies">Industry Case Studies</a></div>
+                    <div class="sub-theme" id="sub-theme5"><a href="/tech-trends-and-future-innovations">Tech Trends & Future Innovations</a></div>
+                </div>
+            </div>
+        </div>
     </div>
+</BaseLayout>
+<style>
+    * {
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+    
+    .display {
+        height: 100%;
+        padding: 1rem;
+        margin: 1rem;
+    }
 
-    <style>
-        .sections-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin: 3rem;
-        }
+    .sections {}
 
-        .section {
-            box-shadow: 1px 1px 10px rgb(223, 223, 223), -1px -1px 10px rgb(232, 232, 232);
-            border-radius: 8px;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            width: 70%;
-            height: 300px;
-            margin: 1rem;
-        }
+    .section {
+        box-shadow: 1px 1px 1px rgb(222, 222, 222), -1px -1px 10px rgb(217, 217, 217);
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        height: 520px;
+        margin-bottom: 6rem;
+    }
 
-        .section:nth-child(odd) {
-            align-self: flex-start; /* Align odd sections to the left */
-        }
+    .theme {
+        box-shadow: 1px 1px 1px rgb(222, 222, 222), -1px -1px 10px rgb(217, 217, 217);
+        transition: transform 1s ease-in-out; /* Transición para theme */
+    }
 
-        .section:nth-child(even) {
-            align-self: flex-end; /* Align even sections to the right */
-        }
+    /* Hover sobre .theme */
+    .theme:hover {
+        transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+    }
 
-        /* Appear on scroll */
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 3s ease, transform 3s ease;
-        }
+    .sub-themes {
+        box-shadow: 1px 1px 1px rgb(222, 222, 222), -1px -1px 10px rgb(217, 217, 217);
+        overflow: auto;
+    }
 
-        .section.in-view {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+    .sub-theme {
+        box-shadow: 1px 1px 1px rgb(222, 222, 222), -1px -1px 10px rgb(217, 217, 217);
+        height: 90px;
+        display: block;
+        align-content: center;
+        margin-bottom: 30px;
+        transition: transform 1s ease-in-out; /* Transición para sub-theme */
+    }
 
-        .section:hover {
-            transform: scale(1.05) translateY(0);
-            transition: transform 0.5s ease-out;
-        }
-        </style>
+    /* Hover sobre .sub-theme */
+    .sub-theme:hover {
+        transform: scale(1.03); /* Aumenta el tamaño un poco más */
+    }
 
-        <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            } else {
-                entry.target.classList.remove('in-view');
-            }
-            });
-        }, { threshold: 0.1 }); // Adjusted threshold for smoother triggering
+    a {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        font-size: 30px;
+        font-weight: 300;
+    }
 
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-        </script>
+    h1 {
+        margin-bottom: 0%;
+        padding: 0%;
+    }
+
+    p {
+        color: rgb(117, 117, 117);
+        font-size: 15px;
+        margin-top: 2%;
+        width: 80%;
+        padding: 0%;
+    }
+</style>

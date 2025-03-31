@@ -92,13 +92,11 @@ import BaseLayout from "../layouts/BaseLayout.astro"
         margin: 1rem;
     }
 
-    .sections {}
-
     .section {
         box-shadow: 1px 1px 1px rgb(222, 222, 222), -1px -1px 10px rgb(217, 217, 217);
         display: grid;
         grid-template-columns: 1fr 1.5fr;
-        height: 520px;
+        height: 70vh;
         margin-bottom: 6rem;
     }
 
@@ -115,6 +113,8 @@ import BaseLayout from "../layouts/BaseLayout.astro"
     .sub-themes {
         box-shadow: 1px 1px 1px rgb(222, 222, 222), -1px -1px 10px rgb(217, 217, 217);
         overflow: auto;
+        scroll-behavior: smooth;
+        scrollbar-width:none;
     }
 
     .sub-theme {

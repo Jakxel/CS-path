@@ -1,8 +1,122 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Sections from '../components/Sections.astro'
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-	Hola
+	<div class="display">
+		<div class="sections">
+			<div class="section" id="section1">
+				<div class="theme">
+					<h1>1 CS Core Fundamentals</h1>
+				</div>
+				<div class="sub-themes">
+					<div class="sub-theme" id="sub-theme1"><a href="/mathematics-for-cs">Mathematics for CS</a></div>
+					<div class="sub-theme" id="sub-theme2"><a href="/data-structures">Data Structures</a></div>
+					<div class="sub-theme" id="sub-theme3"><a href="/algorithms">Algorithms</a></div>
+					<div class="sub-theme" id="sub-theme4"><a href="/programming-paradigms">Programming paradigms</a></div>
+					<div class="sub-theme" id="sub-theme5"><a href="/theory-of-computation">Theory Of Computation</a></div>
+					<div class="sub-theme" id="sub-theme6"><a href="/operating-systems">Operating systems</a></div>
+					<div class="sub-theme" id="sub-theme7"><a href="/networking-and-communication">Networking & Communication</a></div>
+					<div class="sub-theme" id="sub-theme8"><a href="/databases">Databases</a></div>
+				</div>
+			</div>
+			<div class="section" id="section2">
+				<div class="theme">
+					<h1>2 Software Engineer</h1>
+				</div>
+				<div class="sub-themes">
+					<div class="sub-theme" id="sub-theme1"><a href="/software-engineering-principles">Software Engineering Principles</a></div>
+					<div class="sub-theme" id="sub-theme2"><a href="/design-patterns">Design Patterns</a></div>
+					<div class="sub-theme" id="sub-theme3"><a href="/development-methodologies">Development Methodologies</a></div>
+					<div class="sub-theme" id="sub-theme4"><a href="/version-control-and-collaboration">Version Control & Collaboration</a></div>
+					<div class="sub-theme" id="sub-theme5"><a href="/software-testing">Software Testing</a></div>
+					<div class="sub-theme" id="sub-theme6"><a href="/devops-and-cloud-computing">DevOps & Cloud Computing</a></div>
+				</div>
+			</div>
+			<div class="section" id="section3">
+				<div class="theme">
+					<h1>3 System Design</h1>
+				</div>
+				<div class="sub-themes">
+					<div class="sub-theme" id="sub-theme1"><a href="/large-scale-system-development">Large-Scale System Development</a></div>
+					<div class="sub-theme" id="sub-theme2"><a href="/fault-tolerant">Fault-Tolerant</a></div>
+					<div class="sub-theme" id="sub-theme3"><a href="/Highly-available-systems">Highly Available Systems</a></div>
+					<div class="sub-theme" id="sub-theme4"><a href="/databases-at-scale">Databases at Scale</a></div>
+					<div class="sub-theme" id="sub-theme5"><a href="/caching-performance-optimization">Caching & Performance Optimization</a></div>
+					<div class="sub-theme" id="sub-theme6"><a href="/event-driven-architecture">Event-Driven Architecture</a></div>
+					<div class="sub-theme" id="sub-theme7"><a href="/scalability-consistency-models">Scalability & Consistency Models</a></div>
+				</div>
+			</div>
+			<div class="section" id="section4">
+				<div class="theme">
+					<h1>4 Advance Topics</h1>
+				</div>
+				<div class="sub-themes">
+					<div class="sub-theme" id="sub-theme1"><a href="/distributed-computing">Distributed Computing</a></div>
+					<div class="sub-theme" id="sub-theme2"><a href="/cybersecurity">Cybersecurity</a></div>
+					<div class="sub-theme" id="sub-theme3"><a href="/artificial-intelligence-and-machine-learning">IA & Machine Learning</a></div>
+					<div class="sub-theme" id="sub-theme4"><a href="/blockchain-and-applied-cryptography">Blockchain & Applied Cryptography</a></div>
+				</div>
+			</div>
+			<div class="section" id="section5">
+				<div class="theme">
+					<h1>5 Real World Applications</h1>
+				</div>
+				<div class="sub-themes">
+					<div class="sub-theme" id="sub-theme1"><a href="/competitive-programming">Competitive Programming</a></div>
+					<div class="sub-theme" id="sub-theme2"><a href="/software-optimization">Software Optimization</a></div>
+					<div class="sub-theme" id="sub-theme3"><a href="/scalable-system-architecture">Scalable System Architecture</a></div>
+					<div class="sub-theme" id="sub-theme4"><a href="/industry-case-studies">Industry Case Studies</a></div>
+					<div class="sub-theme" id="sub-theme5"><a href="/tech-trends-and-future-innovations">Tech Trends & Future Innovations</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
+
+	<style>
+		.display {
+			display: flex;
+			gap: 24px;
+			padding: 16px;
+		}
+		.sections {
+			display: grid;
+			grid-template-columns: auto auto auto auto auto;
+			gap: 32px;
+		}
+		.section {
+			border: 1px solid #ddd;
+			border-radius: 8px;
+			padding: 16px;
+			background-color: #f9f9f9;
+		}
+		.theme h1 {
+			font-size: 1.5rem;
+			margin-bottom: 16px;
+			color: #333;
+		}
+		.sub-themes {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+		}
+		.sub-theme {
+			flex: 1 1 calc(50% - 12px);
+
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			padding: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+		.sub-theme a {
+			text-decoration: none;
+			color: #007acc;
+			font-weight: bold;
+		}
+		.sub-theme a:hover {
+			text-decoration: underline;
+		}
+	</style>
 </BaseLayout>
